@@ -1,14 +1,20 @@
-const incrementButton = document.getElementsByID('increase');
-const decrementButton = document.getElementsByID('decrease');
-const counterValue = document.getElementsByID('count').value;
+const incrementButton = document.getElementById('increase');
+const decrementButton = document.getElementById('decrease');
+const resetButton = document.getElementById('reset');
+const count = document.getElementById('count');
+let counter = 0;
 
 incrementButton.addEventListener('click', function(e) {
-    counterValue++;
-    document.getElementsByClassName('counter').textContent = counterValue;  
-    console.log(counterValue);
-});
+    counter++;
+    count.innerHTML = counter;
+})
 
 decrementButton.addEventListener('click', function(e) {
-    counterValue--;
-    document.getElementsByClassName('counter').textContent = counterValue;  
-});
+    counter--;
+    count.innerHTML = counter;
+})
+
+resetButton.addEventListener('click', function(e) {
+    counter = 0;
+    count.innerHTML = counter;
+})

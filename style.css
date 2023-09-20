@@ -34,3 +34,7 @@ button:hover {
 .counter {
     font-size: 30px;
 }
+
+.reset {
+    margin-top: 10px;
+}
